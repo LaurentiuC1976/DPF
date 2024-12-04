@@ -19,8 +19,7 @@ CREATE OR REPLACE GIT REPOSITORY GIT.public.git_repo
   ORIGIN = 'https://github.com/LaurentiuC1976/DPF'; -- INSERT URL OF FORKED REPO HERE
 
 
-CREATE OR ALTER DATABASE DEMO_PROD; 
-
+CREATE OR ALTER DATABASE DEMO_{{environment}};
 
 -- To monitor data pipeline's completion
 /*CREATE OR REPLACE NOTIFICATION INTEGRATION email_integration

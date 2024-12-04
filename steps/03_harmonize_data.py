@@ -267,7 +267,7 @@ pipeline = [
 root = Root(Session.builder.getOrCreate())
 
 # create views in Snowflake
-public_schema = root.databases["demo_prod"].schemas["public"]
+public_schema = root.databases[f"demo_{os.environ['environment']}"].schemas["public"]
 public_schema.user_defined_functions.create(
     map_city_to_airport, mode=CreateMode.or_replace
 )
