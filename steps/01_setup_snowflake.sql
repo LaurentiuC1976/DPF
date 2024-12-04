@@ -16,7 +16,7 @@ CREATE OR REPLACE API INTEGRATION git_api_integration
 -- Git repository object is similar to external stage
 CREATE OR REPLACE GIT REPOSITORY GIT.public.git_repo
   API_INTEGRATION = git_api_integration
-  ORIGIN = 'https://github.com/LaurentiuC1976/DPF_REP'; -- INSERT URL OF FORKED REPO HERE
+  ORIGIN = 'https://github.com/LaurentiuC1976/DPF'; -- INSERT URL OF FORKED REPO HERE
 
 
 CREATE OR ALTER DATABASE DEMO_PROD; 
@@ -36,7 +36,7 @@ CREATE OR ALTER SCHEMA gold;*/
 CREATE OR ALTER SCHEMA raw;
 
 -- Schema level objects
-CREATE OR REPLACE FILE FORMAT bronze.json_format TYPE = 'json';
+CREATE OR REPLACE FILE FORMAT raw.json_format TYPE = 'json';
 CREATE OR ALTER STAGE raw.raw;
 
 
